@@ -40,6 +40,9 @@ conda activate dask
 gpuci_logger "Install dask"
 python -m pip install git+https://github.com/dask/dask
 
+gpuci_logger "Install distributed"
+python -m pip install git+https://github.com/dask/distributed
+
 gpuci_logger "Install dask-sql"
 pip install -e ".[dev]"
 python setup.py java
